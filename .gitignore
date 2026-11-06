@@ -1,16 +1,40 @@
+# Python & uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment variables & secrets
 .env
 .env.*
 !.env.example
-__pycache__/
-*.pyc
-.venv/
+*service-account*.json
+*credentials*.json
+
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
 *.tfvars
 !*.tfvars.example
-crash.log
 *.tfplan
-*service-account*.json
-*credentials*.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE & operating system
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# Local build artifacts
+dist/
+build/
+*.egg-info/
